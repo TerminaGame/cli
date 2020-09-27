@@ -1,0 +1,23 @@
+name: Swift CI
+
+on:
+  push:
+    branches: [root]
+  pull_request:
+    branches: [root]
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+
+    steps:
+      - uses: sersoft-gmbh/SwiftyActions@v1
+        with:
+          release-version: 5.2.2
+      - uses: actions/checkout@v2
+      - name: Build
+        run: swift build -v --configuration release
+      # - uses: actions/upload-artifact@v2
+      #   with:
+      #     name: termina
+      #     path: .build/x86_64-apple-macosx/release/Termina
