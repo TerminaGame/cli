@@ -1,4 +1,4 @@
-name: Swift CI
+name: Swift CI (Linux)
 
 on:
   push:
@@ -13,11 +13,11 @@ jobs:
     steps:
       - uses: sersoft-gmbh/SwiftyActions@v1
         with:
-          release-version: 5.2.2
+          release-version: 5.3
       - uses: actions/checkout@v2
       - name: Build
         run: swift build -v --configuration release
-      # - uses: actions/upload-artifact@v2
-      #   with:
-      #     name: termina
-      #     path: .build/x86_64-apple-macosx/release/Termina
+      - uses: actions/upload-artifact@v2
+        with:
+          name: termina
+          path: ./build/x86_64-unknown-linux-gnu/release/Termina
