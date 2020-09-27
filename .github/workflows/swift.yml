@@ -17,4 +17,4 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: termina
-          path: .build/release/Termina
+          path: .build/x86_64-apple-macosx/release/Termina
