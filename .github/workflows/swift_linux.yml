@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: sersoft-gmbh/SwiftyActions@v1
         with:
-          release-version: 5.3
+          release-version: 5.0
       - uses: actions/checkout@v2
       - name: Build
         run: swift build -v --configuration release
