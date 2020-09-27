@@ -2,6 +2,9 @@
 
 A Swifty and fun, single-user, level-based user dungeon game for macOS and Linux.
 
+![Swift 5.0](https://img.shields.io/badge/swift-5.0-orange)
+![Swift CI](https://github.com/TerminaGame/cli/workflows/Swift%20CI/badge.svg)
+
 This repository provides the base source code for the game as well as the project files for building the command line application.
 
 **This is the recommended package over [TerminaGame/base](https://github.com/TerminaGame/base).**
