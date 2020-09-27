@@ -2,16 +2,19 @@ name: Swift CI
 
 on:
   push:
-    branches: [ root ]
+    branches: [root]
   pull_request:
-    branches: [ root ]
+    branches: [root]
 
 jobs:
   build:
-
     runs-on: macos-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Build
-      run: swift build -v
+      - uses: actions/checkout@v2
+      - name: Build
+        run: swift build -v --configuration release
+      - uses: actions/upload-artifact@v2
+        with:
+          name: termina
+          path: .build/release/Termina
